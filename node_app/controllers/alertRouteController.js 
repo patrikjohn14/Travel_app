@@ -1,0 +1,38 @@
+const db = require('../database');
+
+exports.checkAlertForPlace = async (req, res) => {
+  try {
+    const { place_id } = req.query;
+
+    if (!place_id) {
+      return res.status(400).json({ success: false, message: "Missing place_id" });
+    }
+
+    const [rows] = await db.query(
+      `SELECT suggested_route
+       FROM alert
+       WHERE place_id = ? AND expires_at > NOW()
+       ORDER BY created_at DESC
+       LIMIT 1`,
+      [place_id]
+    );
+
+    if (rows.length > 0) {
+      res.json({
+        success: true,
+        hasAlert: true,
+        suggested_route: rows[0].suggested_route
+      });
+    } else {
+      res.json({
+        success: true,
+        hasAlert: false,
+        suggested_route: null
+      });
+    }
+
+  } catch (error) {
+    console.error('Error checking alert:', error);
+    res.status(500).json({ success: false, message: 'Internal server error' });
+  }
+};
