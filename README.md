@@ -1,16 +1,14 @@
-# maps_tracker
+# Travel App
 
-A new Flutter project.
+This is a Flutter travel app project.
 
-## Getting Started
+## Author
 
-This project is a starting point for a Flutter application.
+Developed and maintained by **patrikjohn14**  
+📧 vivovivo217712@protonmail.com  
+© 2025 All rights reserved.
 
-A few resources to get you started if this is your first Flutter project:
+## License
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
