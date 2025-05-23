@@ -1,3 +1,8 @@
+/// This file is part of the Travel App project.
+/// Developed by patrikjohn14 © 2025
+/// Email: vivovivo217712@protonmail.com
+/// All rights reserved.
+
 import 'package:flutter/material.dart';
 import 'package:maps_tracker/screen/auth_screen/login.dart';
 import 'package:maps_tracker/screen/auth_screen/register.dart';
